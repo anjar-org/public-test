@@ -8,7 +8,10 @@ on:
     types: [synchronize]
 
 jobs:
-  deploy:
+  yarn-operation:
+    uses: anjar-org/core-pipeline/.github/workflows/yarn-operation.yml@main
+    secrets: inherit
+  build-deploy:
     uses: anjar-org/core-pipeline/.github/workflows/main-workflow.yml@main
     secrets: inherit
 
